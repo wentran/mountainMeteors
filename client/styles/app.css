@@ -27,7 +27,7 @@ input, select, button, textarea {
 
 .form-control {
   display: block;
-  width: 50%;
+  width: 33%;
   padding: 0.5rem 0.75rem;
   font-size: 1rem;
   line-height: 1.25;
@@ -227,7 +227,7 @@ label {
 
 .rangeslider-horizontal {
     height: 20px;
-    width: 50%;
+    width: 35%;
     border-radius: 10px
 }
 
@@ -314,7 +314,7 @@ label {
   outline: none;
   overflow: hidden;
   position: relative;
-  width: 50%;
+  width: 30%;
 }
 .Select-control:hover {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
@@ -420,13 +420,13 @@ label {
   position: relative;
   text-align: center;
   vertical-align: middle;
-  width: 16px;
+  width: 14px;
 }
 .Select-loading {
   -webkit-animation: Select-animation-spin 400ms infinite linear;
   -o-animation: Select-animation-spin 400ms infinite linear;
   animation: Select-animation-spin 400ms infinite linear;
-  width: 16px;
+  width: 14px;
   height: 16px;
   box-sizing: border-box;
   border-radius: 50%;
@@ -519,7 +519,7 @@ label {
   max-height: 200px;
   position: absolute;
   top: 100%;
-  width: 47%;
+  width: 30%;
   z-index: 1;
   -webkit-overflow-scrolling: touch;
 }
@@ -651,6 +651,10 @@ label {
   }
 }
 
+.pet-slider {
+  width: 32%;
+  float: left
+}
 .container {
   margin-left: auto;
   margin-right: auto;

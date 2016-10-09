@@ -348,7 +348,7 @@ class Survey extends Component {
           <div>
 
             <h4> Furry Little Friends ?? </h4>
-            <Select
+            <Select 
                 name="form-field-name"
                 value={this.state.PetSelected}
                 options={Pets}
@@ -358,7 +358,7 @@ class Survey extends Component {
 
             <div className='horizontal-slider'>
               <h4>Rank pet accomo ?</h4>
-              <Slider
+              <Slider className='pet-slider'
                 min={0}
                 max={7}
                 value={this.state.petRank}
