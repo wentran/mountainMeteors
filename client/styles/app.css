@@ -44,7 +44,7 @@ input, select, button, textarea {
  * Base
  */
 
-bodyPanel {
+.bodyPanel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -61,14 +61,7 @@ bodyPanel {
   height: 100%;
 }
 
-.container {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  max-width: 612px;
-  max-width: 34rem;
-}
+
 
 
 
@@ -104,9 +97,9 @@ h1 {
 
 .panel {
     border: 1px solid #dce0e0;
+    padding: 10px;
     background-color: #fff;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
+    width: 40%;
     border-radius: 0
 }
 
@@ -204,7 +197,7 @@ label {
 
 .rangeslider .rangeslider__fill,
 .rangeslider .rangeslider__handle {
-    position: absolute
+    position: absolute;
 }
 
 .rangeslider,
@@ -227,20 +220,20 @@ label {
 
 .rangeslider-horizontal {
     height: 20px;
-    width: 35%;
+    width: 30%;
     border-radius: 10px
 }
 
 .rangeslider-horizontal .rangeslider__fill {
-    height: 100%;
-    background: #27ae60;
+    height: 90%;
+    background: #00bfff;
     border-radius: 10px;
     top: 0
 }
 
 .rangeslider-horizontal .rangeslider__handle {
-    width: 40px;
-    height: 40px;
+    width: 25x;
+    height: 25px;
     border-radius: 40px;
     top: -10px
 }
@@ -254,7 +247,7 @@ label {
 
 .rangeslider-vertical .rangeslider__fill {
     width: 50%;
-    background: #27ae60;
+    background: #00bfff;
     box-shadow: none;
     bottom: 0
 }
@@ -695,6 +688,7 @@ h3,
 h4,
 .h4 {
   font-size: 1em;
+  font-family: 'Raleway', sans-serif;;
 }
 h5,
 .h5 {
@@ -1092,4 +1086,36 @@ h6,
       font-size: .8em;
       padding: 5px 10px; } }
 
+.category_title {
+  font-family: 'Raleway', sans-serif;
 
+}
+
+
+
+.card_Neighborhood {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    height: 20%
+
+}
+
+.card_Neighborhood:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.main {
+  padding: 60px;
+  font-family: GeosansLight.ttf;
+  border: 1px solid #c3c3c3;
+  resize: none;
+  width:100%;
+  -webkit-flex-wrap: wrap; /* Safari */
+   flex-wrap:         wrap;
+  font-family: 'Raleway', sans-serif;
+  height:100%;
+  background-color: #ffffff;
+  position:relative;
+  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0
+}

@@ -5,8 +5,10 @@ import Slider from 'react-rangeslider'
 import { postSurveyAnswers } from '../../actionCreators/surveysActions';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import FlipCard from 'react-flipcard';
+
 import Select from 'react-select';
-import { Grid, Col, Row, FormGroup, ControlLabel, HelpBlock, FormControl } from 'react-bootstrap';
+import { Grid, Col, Row, FormGroup, ControlLabel,  Jumbotron, HelpBlock, FormControl } from 'react-bootstrap';
 import css from '../../styles/app.css'
 
 
@@ -215,11 +217,18 @@ class Survey extends Component {
   render () {
     const { value } = this.state
     return (
-      <div>
+    <div>
+      <Jumbotron>
+          <h1>Lets us get to know a little bit about you!</h1>
+          <p></p>
+
+        </Jumbotron>
+
+
         <form onSubmit={this.onFormSubmit}>
+          <div className="main">
 
-
-          /*neighborhood*/
+         <div className='card_Neighborhood'>
           <h4>Let's pick your fav neighborhoods </h4>
           <Select
             name="form-field-name"
@@ -242,9 +251,11 @@ class Survey extends Component {
             </div>
             <hr />
           </div>
+          </div>
+      
 
-
-          ************************************************
+          <div >
+          <div>
           <h4>Let's pick apartment type </h4>
           <Select 
             name="form-field-name"
@@ -266,9 +277,11 @@ class Survey extends Component {
             </div>
             <hr />
           </div>
+          </div>
 
 
-          *****************FEES: YES OR NO*************
+
+
           <Select 
             name="form-field-name"
             value={this.state.FeesSelected}
@@ -289,8 +302,7 @@ class Survey extends Component {
           </div>
 
 
-          ***********RENT BUDGET********************
-          /*your rent budget */
+
           <Select
             name="form-field-name"
             value={this.state.RentMinSelected}
@@ -371,8 +383,8 @@ class Survey extends Component {
 
           </div>
 
-        **********************************
-          AMENITIES
+
+
           <Select
             name="form-field-name"
             value={this.state.amenitiesSelected}
@@ -392,7 +404,7 @@ class Survey extends Component {
             <hr />
           </div>
 
-          ***************TARGETED LOCATION******************
+         
           <FormGroup
                     controlId="formBasicText"
                                   >
@@ -406,7 +418,10 @@ class Survey extends Component {
                     <FormControl.Feedback />
                     <HelpBlock>Validation is based on valid address.</HelpBlock>
                   </FormGroup>
-          ***************COMMUTE*******************
+         
+
+
+  ***COMMUTE*****
         
           <div className='horizontal-slider'>
             <h4>Your ideal commute time?</h4>
@@ -434,11 +449,12 @@ class Survey extends Component {
   
 
           <button type="submit" className="btn btn-block btn-primary">Submit</button>
-
+        </div>
+        </div>
+    
         </form>
+      
       </div>
-
-
     )
   }
 }
