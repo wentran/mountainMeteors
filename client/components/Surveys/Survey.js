@@ -228,33 +228,6 @@ class Survey extends Component {
       <form onSubmit={this.onFormSubmit}>
       <div className="main">
 
-      <div className='card_Neighborhood'>
-      <h4>Let's pick your fav neighborhoods </h4>
-      <Select
-      name="form-field-name"
-      value={this.state.NeighborhoodsSelected}
-      multi={true}
-      options={Neighborhoods}
-      onChange={(value) => this.handleChange("NeighborhoodsSelected", value)}
-      />
-
-      <div className='horizontal-slider'>
-      <h4>Rank neighborhoods ?</h4>
-      <Slider
-      min={0}
-      max={7}
-      value={this.state.neighborhoodRank}
-      onChange={(value) => this.handleChange("neighborhoodRank",value)}
-      />
-      <div className='value'>
-      Ranking: {this.state.neighborhoodRank}
-      </div>
-      <hr />
-      </div>
-      </div>
-      
-
-
       <div className='card_aptType'>
       <div className='container'>
 
@@ -367,6 +340,34 @@ class Survey extends Component {
       </div>
       </div>
 
+    
+    <div className='Commute_Card'>
+    <div className='container'>
+      <div className='horizontal-slider'>
+      <h4>Your ideal commute time?</h4>
+      <Select
+      name="form-field-name"
+      value={this.state.CommuteMinSelected}
+      options={CommuteMin}
+      onChange={(value) => this.handleChange("CommuteMinSelected", value)}
+      />
+      <Select
+      name="form-field-name"
+      value={this.state.CommuteMaxSelected}
+      options={CommuteMax}
+      onChange={(value) => this.handleChange("CommuteMaxSelected", value)}
+      />     
+      <Slider
+      min={0}
+      max={7}
+      value={this.state.commuteRank}
+      onChange={(value) => this.handleChange("commuteRank", value)}
+      />
+      <div className='value'>Ranking: {this.state.commuteRank}</div>
+      <hr />
+      </div>
+      </div>
+      </div>
 
 
       <div className='Sq_ft'>
@@ -395,7 +396,32 @@ class Survey extends Component {
       </div>
 
 
+      
+      <div className='card_Neighborhood'>
+      <h4>Let's pick your fav neighborhoods </h4>
+      <Select
+      name="form-field-name"
+      value={this.state.NeighborhoodsSelected}
+      multi={true}
+      options={Neighborhoods}
+      onChange={(value) => this.handleChange("NeighborhoodsSelected", value)}
+      />
 
+      <div className='horizontal-slider'>
+      <h4>Rank neighborhoods ?</h4>
+      <Slider
+      min={0}
+      max={7}
+      value={this.state.neighborhoodRank}
+      onChange={(value) => this.handleChange("neighborhoodRank",value)}
+      />
+      <div className='value'>
+      Ranking: {this.state.neighborhoodRank}
+      </div>
+      <hr />
+      </div>
+      </div>
+      
       <div className='Amenities_Card'>
       <div className='container'>
       <Select
@@ -419,7 +445,8 @@ class Survey extends Component {
       </div>
       </div>
 
-
+    <div className='Targeded_Location_Card'>
+    <div className='container'>
       <FormGroup
       controlId="formBasicText"
       >
@@ -433,42 +460,14 @@ class Survey extends Component {
       <FormControl.Feedback />
       <HelpBlock>Validation is based on valid address.</HelpBlock>
       </FormGroup>
-
-
-
-      ***COMMUTE*****
-
-      <div className='horizontal-slider'>
-      <h4>Your ideal commute time?</h4>
-      <Select
-      name="form-field-name"
-      value={this.state.CommuteMinSelected}
-      options={CommuteMin}
-      onChange={(value) => this.handleChange("CommuteMinSelected", value)}
-      />
-      <Select
-      name="form-field-name"
-      value={this.state.CommuteMaxSelected}
-      options={CommuteMax}
-      onChange={(value) => this.handleChange("CommuteMaxSelected", value)}
-      />     
-      <Slider
-      min={0}
-      max={7}
-      value={this.state.commuteRank}
-      onChange={(value) => this.handleChange("commuteRank", value)}
-      />
-      <div className='value'>Ranking: {this.state.commuteRank}</div>
-      <hr />
+      </div>
       </div>
 
-      </div>
 
+
+      </div>
       <button type="submit" className="btn btn-block btn-primary">Submit</button>
-
-
       </form>
-      
       </div>
       )
 }
