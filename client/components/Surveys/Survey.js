@@ -218,10 +218,11 @@ class Survey extends Component {
     const { value } = this.state
     return (
       <div>
-      <Jumbotron>
-      <h1>Lets us get to know a little bit about you!</h1>
+      <Jumbotron style={{'backgroundImage': 'url(http://localhost:2500/uploads/banner1.jpg)'}}>
+      <div >
+      <h4>Lets us get to know a little bit about you!</h4>
       <p></p>
-
+      </div>
       </Jumbotron>
 
 
@@ -313,6 +314,7 @@ class Survey extends Component {
 
 
       <div className='card_Fees'>
+      <div style={{'backgroundImage': 'url(http://localhost:2500/uploads/neighborhood-guide.jpg)'}}>
       <div className='container'>
       <div className='horizontal-slider'>
       <h4> *Square Feet**Your ideal apt size?</h4>
@@ -339,12 +341,14 @@ class Survey extends Component {
       </div>
       </div>
       </div>
+      </div>
 
     
     <div className='Commute_Card'>
     <div className='container'>
       <div className='horizontal-slider'>
       <h4>Your ideal commute time?</h4>
+      <div className='rangeWrap'>
       <Select
       name="form-field-name"
       value={this.state.CommuteMinSelected}
@@ -356,7 +360,8 @@ class Survey extends Component {
       value={this.state.CommuteMaxSelected}
       options={CommuteMax}
       onChange={(value) => this.handleChange("CommuteMaxSelected", value)}
-      />     
+      /> 
+      </div>    
       <Slider
       min={0}
       max={7}
